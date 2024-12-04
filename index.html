@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil - Sorendo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    justify-content: center; /* Centre horizontalement */
+    gap: 15px; /* Espacement entre le logo et le texte */
+    padding: 20px 0;
+    background-color: #005A9C;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    height: 60px; /* Ajuste la taille */
+    width: auto; /* Conserve les proportions */
+    margin-bottom: 5px; /* Aligne mieux avec le texte */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
+        .hero {
+            text-align: center;
+            background: #005A9C;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .hero button:hover {
+            background-color: #e05500;
+            transform: scale(1.05);
+        }
+
+        .categories,
+        .featured-products {
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        .categories h2,
+        .featured-products h2 {
+            color: #005A9C;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .categories ul,
+        .featured-products ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .categories ul li,
+        .featured-products ul li {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .categories ul li:hover,
+        .featured-products ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .categories ul li img,
+        .featured-products ul li img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .categories ul li p,
+        .featured-products ul li p {
+            margin: 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        footer {
+            background-color: #005A9C;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .categories ul li,
+            .featured-products ul li {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories ul li,
+            .featured-products ul li {
+                flex: 1 1 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="images/logosorendo.png" alt="Logo Sorendo">
+        <div>
+            <h1>Sorendo</h1>
+            <p>Votre comparateur technologique de confiance</p>
+        </div>
+    </header>
+
+<section class="hero">
+    <h1>Bienvenue sur Sorendo</h1>
+    <p>Découvrez les meilleures offres et économisez sur vos produits préférés</p>
+    <button>Voir les meilleures offres</button>
+</section>
+
+<section class="categories">
+    <h2>Catégories populaires</h2>
+    <ul>
+        <li><img src="images/smartphone.webp" alt="Smartphones"><p>Smartphones</p></li>
+        <li><img src="images/ordinateur.webp" alt="Informatique"><p>Informatique</p></li>
+        <li><img src="images/smarttv.webp" alt="Télévisions"><p>Télévisions</p></li>
+        <li><img src="images/machine-a-laver.webp" alt="Électroménager"><p>Électroménager</p></li>
+    </ul>
+</section>
+
+<section class="featured-products">
+    <h2>Produits en vedette</h2>
+    <p>Découvrez une sélection de nos meilleures offres :</p>
+    <ul>
+        <li><img src="images/consolejeux.webp" alt="Produit 1"><p>Produit 1 - €99</p></li>
+        <li><img src="images/pc-gaming.webp" alt="Produit 2"><p>Produit 2 - €199</p></li>
+        <li><img src="images/robotpâtissier.webp" alt="Produit 3"><p>Produit 3 - €299</p></li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sorendo - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
